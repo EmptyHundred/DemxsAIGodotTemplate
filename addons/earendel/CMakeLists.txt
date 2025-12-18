@@ -6,7 +6,6 @@ project(Earendel)
 # ============================================================
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_GENERATOR "Visual Studio 18 2026")
 # ============================================================
 # 多配置支持 (Visual Studio)
 # ============================================================

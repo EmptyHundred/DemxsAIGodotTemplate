@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bybvwolshdiki"]
+
+[ext_resource type="Script" uid="uid://bgqhkfwdbjxw6" path="res://addons/earendel/Content/Levels/base.gd" id="1_xttlc"]
+
+[sub_resource type="Environment" id="Environment_mm6d1"]
+sdfgi_enabled = true
+sdfgi_energy = 4.0
+sdfgi_normal_bias = 4.955
+fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 1.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_mm6d1"]
+size = Vector3(80, 0.5, 80)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xttlc"]
+
+[node name="World" type="Node3D" unique_id=1087822716]
+script = ExtResource("1_xttlc")
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="." unique_id=479823614]
+transform = Transform3D(0.6946584, 0.7193398, 0, -0.7193398, 0.6946584, 0, 0, 0, 1, 0, 400, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1156673430]
+environment = SubResource("Environment_mm6d1")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1828030259]
+mesh = SubResource("BoxMesh_mm6d1")
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1888362698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7530155, 0)
+mesh = SubResource("BoxMesh_xttlc")

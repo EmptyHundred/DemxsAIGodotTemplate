@@ -1,0 +1,19 @@
+[gd_resource type="VisualShader" format=3 uid="uid://chdqvbcfjmo7o"]
+
+[sub_resource type="VisualShaderNodeVec3Parameter" id="VisualShaderNodeVec3Parameter_8s1f2"]
+expanded_output_ports = [0]
+parameter_name = "Color"
+default_value_enabled = true
+default_value = Vector3(0.9, 0.9, 0.9)
+
+[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_8s1f2"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0, 0, 0), 2, Vector3(1, 1, 1)]
+op_type = 4
+
+[resource]
+nodes/fragment/0/position = Vector2(160, 320)
+nodes/fragment/2/node = SubResource("VisualShaderNodeVec3Parameter_8s1f2")
+nodes/fragment/2/position = Vector2(-860, 120)
+nodes/fragment/3/node = SubResource("VisualShaderNodeClamp_8s1f2")
+nodes/fragment/3/position = Vector2(-180, 320)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 0, 0)

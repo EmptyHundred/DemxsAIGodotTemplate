@@ -1,0 +1,3 @@
+[submodule "addons/earendel/godot-cpp"]
+	path = addons/earendel/godot-cpp
+	url = https://github.com/godotengine/godot-cpp.git

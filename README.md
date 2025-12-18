@@ -13,14 +13,23 @@ To properly debug GDExtension or engine-level code, you must build the Godot Eng
 
 
 ## 2. Generate Project Files
-The template uses CMake to generate the Visual Studio solution.
+The template uses CMake to generate the Visual Studio solution. 
+For compilation options including extra include path and target lib, see [`CMakeLists.txt`](addons/earendel/CMakeLists.txt)
 
-1.  Locate the [`GenerateProjectFile.bat`](addons/earendel/GenerateProjectFiles.bat) file in the root directory.
-2.  **Visual Studio Version:** If you are using a specific version of Visual Studio, open the `.bat` file and modify the generator line:
+1.  This repository contains submodule of [godot-cpp](https://github.com/godotengine/godot-cpp), make sure the submodule is up-to-date by running:
+    ```bash
+    git submodule init
+    ```
+    Then
+    ```bash
+    git submodule update
+    ```
+2.  Locate the [`GenerateProjectFile.bat`](addons/earendel/GenerateProjectFiles.bat) file in the root directory.
+3.  **Visual Studio Version:** If you are using a specific version of Visual Studio, open the `.bat` file and modify the generator line:
     * Find: `set CMAKE_GENERATOR="Visual Studio 18 2026"`
     * Change to your required version.
-3.  Run `GenerateProjectFile.bat`.
-4.  The generated Visual Studio project files will be located in the **`./Build`** folder.
+4.  Run `GenerateProjectFile.bat`.
+5.  The generated Visual Studio project files will be located in the **`./Build`** folder.
 
 
 ## 3. Visual Studio Configuration & Debugging
@@ -29,7 +38,7 @@ To debug your code while running the Godot Editor, you must configure the projec
 ### Project Setup
 1.  Open the solution inside the `Build` folder.
 2.  **Set Startup Project:** Right-click the **Earendel** project in the Solution Explorer and select **Set as StartUp Project**.
-3.  (Optional) Add your Godot Project files to the solution for easier navigation and breakpoint debugging.
+3.  (Optional) Add your Godot Project(godot.vcxproj) to the solution for easier navigation and breakpoint debugging.
 
 ### Debugger Settings
 Right-click the **Earendel** project, go to **Properties**, and navigate to **Configuration Properties > Debugging**:

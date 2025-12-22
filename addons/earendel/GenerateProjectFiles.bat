@@ -20,7 +20,7 @@ set BUILD_DIR=%ROOT_DIR%Build
 set BUILD_TYPE=Debug
 set GODOT_CPP_DIR=%ROOT_DIR%godot-cpp
 set GODOT_CPP_BUILD=%ROOT_DIR%godot-cppbuild
-set CMAKE_GENERATOR="Visual Studio 18 2026"
+set CMAKE_GENERATOR="Visual Studio 17 2022"
 set CMAKE_ARCH=x64
 
 echo.

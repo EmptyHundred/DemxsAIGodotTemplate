@@ -1,5 +1,14 @@
 # DemxsAIGodotTemplate
 
+## Prerequisite
+To deploy development environment, the following software needs to be installed:
+| Type    | Software |
+| -------- | ------- |
+| Debugging  | Visual Studio    |
+| Generate Project | CMake     |
+| Compiling Godot    | Python - scons    |
+
+
 ## 1. Build Godot Engine
 To properly debug GDExtension or engine-level code, you must build the Godot Engine from source with debug symbols.
 
@@ -26,7 +35,7 @@ For compilation options including extra include path and target lib, see [`CMake
     ```
 2.  Locate the [`GenerateProjectFile.bat`](addons/earendel/GenerateProjectFiles.bat) file in the root directory.
 3.  **Visual Studio Version:** If you are using a specific version of Visual Studio, open the `.bat` file and modify the generator line:
-    * Find: `set CMAKE_GENERATOR="Visual Studio 18 2026"`
+    * Find: `set CMAKE_GENERATOR="Visual Studio 17 2022"`
     * Change to your required version.
 4.  Run `GenerateProjectFile.bat`.
 5.  The generated Visual Studio project files will be located in the **`./Build`** folder.
